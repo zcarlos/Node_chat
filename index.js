@@ -11,18 +11,18 @@ app.use(express.static(__dirname + '/public'));
 //});
 
 io.on('connection', function(socket){
-	console.log('Um utilizador conectou-se...');
+	console.log('A user connected...');
 
-	socket.on('mensagem chat', function(msg){
+	socket.on('chat message', function(msg){
 		//console.log(msg);
-		io.emit('mensagem chat', msg);
+		io.emit('chat message', msg);
 	});
 
 	socket.on('disconnect', function(){
-		console.log('Um utilizador desconetou-se...');
+		console.log('A user disconnected...');
 	});
 });
 
 http.listen(8080, function(){
-	console.log('A escuta no porto: 8080');
+	console.log('Listening on port: 8080');
 });

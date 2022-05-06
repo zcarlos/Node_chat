@@ -7,13 +7,13 @@ $(function(){
 		// em alternativa no fim pode-se utilizar 'return false'
 		e.preventDefault();
 		if($('.m').val() != ''){
-			socket.emit('mensagem chat', $('.m').val());
+			socket.emit('chat message', $('.m').val());
 			$('.m').val('');
 		}
 		
 	});
 
-	socket.on('mensagem chat', function(msg){
+	socket.on('chat message', function(msg){
 		$('.msgs').append($('<div class="msg">').text(msg));
 
 		// Efetua o Scroll das mensagens

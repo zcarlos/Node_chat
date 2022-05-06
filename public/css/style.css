@@ -19,6 +19,7 @@ body{
 .msgs{
 	position: relative;
 	overflow-y: scroll;
+	font-size: 1.2em;
 	width: 100%;
 	height: 93%;	
 	border: 1px solid #131313;
