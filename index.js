@@ -24,5 +24,5 @@ io.on('connection', function(socket){
 });
 
 http.listen(8080, function(){
-	console.log('A escuta no porto: 3000');
+	console.log('A escuta no porto: 8080');
 });
